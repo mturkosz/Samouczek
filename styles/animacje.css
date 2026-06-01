@@ -1,0 +1,163 @@
+.demo-live {
+    padding: 15px;
+    border: 2px solid black;
+    background: rgb(70, 70, 70);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.t1 {
+    transition: 0.3s;
+}
+
+.t1:hover {
+    background: blue;
+}
+
+.t2 {
+    background: green;
+    transition: all 0.3s;
+}
+
+.t2:hover {
+    background: orange;
+    transform: scale(1.2);
+}
+
+.t3 {
+    transition: 0.3s;
+}
+
+.t3:hover {
+    transform: translateX(50px);
+}
+
+.t4 {
+    transition: 0.3s;
+}
+
+.t4:hover {
+    transform: rotate(20deg);
+}
+
+.t5 {
+    transition: 0.3s;
+}
+
+.t5:hover {
+    transform: scale(1.3);
+}
+
+@keyframes ruch {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(200px); }
+}
+
+@keyframes kolor {
+    0% { background: red; }
+    50% { background: yellow; }
+    100% { background: blue; }
+}
+
+@keyframes combo {
+    0% { transform: translateX(0); background: red; }
+    50% { transform: translateX(150px); background: green; }
+    100% { transform: translateX(0); background: blue; }
+}
+
+.a2 {
+    animation: kolor 3s infinite;
+}
+
+.a3 {
+    animation: combo 3s infinite;
+}
+
+.a1 {
+    animation: ruch 2s infinite;
+}
+
+.a4 {
+    animation: ruch 2s infinite;
+    animation-delay: 1s;
+}
+
+.a5 {
+    animation: ruch 2s infinite ease-in-out;
+}
+
+.timing-functions {
+    padding: 15px;
+}
+
+.anim-row {
+    position: relative;
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+.anim-row span {
+    display: inline-block;
+    width: 100px;
+}
+
+.anim-row .box {
+    width: 40px;
+    height: 40px;
+    background: red;
+    position: relative;
+}
+
+.linear {
+    animation: ruch 3s infinite linear;
+}
+
+.ease {
+    animation: ruch 3s infinite ease;
+}
+
+.ease-in {
+    animation: ruch 3s infinite ease-in;
+}
+
+.ease-out {
+    animation: ruch 3s infinite ease-out;
+}
+
+.ease-in-out {
+    animation: ruch 3s infinite ease-in-out;
+}
+
+@keyframes ruch2 {
+    from {
+        left: 0;
+    }
+    to {
+        left: 300px;
+    }
+}
+
+.normal {
+    animation: ruch2 2s infinite linear;
+}
+
+.reverse {
+    animation: ruch2 2s infinite linear reverse;
+}
+
+.alternate {
+    animation: ruch2 2s infinite linear alternate;
+}
+
+.alternate-reverse {
+    animation: ruch2 2s infinite linear alternate-reverse;
+}

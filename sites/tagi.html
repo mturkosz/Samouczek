@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="#">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Tagi tekstowe</h2>
+
+            <p>
+                Tagi tekstowe służą do formatowania i organizowania tekstu na stronie internetowej.
+                Dzięki nim możemy tworzyć nagłówki, akapity, wyróżnienia oraz inne elementy
+                poprawiające czytelność dokumentu.
+            </p>
+
+            <h3>Nagłówki</h3>
+
+            <p>
+                W HTML dostępnych jest sześć poziomów nagłówków – od <strong>&lt;h1&gt;</strong>
+                do <strong>&lt;h6&gt;</strong>. Im wyższy numer, tym mniejszy nagłówek.
+            </p>
+
+            <pre>
+&lt;h1&gt;Nagłówek poziomu 1&lt;/h1&gt;
+&lt;h2&gt;Nagłówek poziomu 2&lt;/h2&gt;
+&lt;h3&gt;Nagłówek poziomu 3&lt;/h3&gt;
+</pre>
+
+            <h3>Efekt działania</h3>
+
+            <div class="przyklad">
+                <h1>Nagłówek poziomu 1</h1>
+                <h2>Nagłówek poziomu 2</h2>
+                <h3>Nagłówek poziomu 3</h3>
+            </div>
+
+            <h3>Akapity</h3>
+
+            <p>
+                Do tworzenia akapitów służy znacznik <strong>&lt;p&gt;</strong>.
+            </p>
+
+            <pre>
+&lt;p&gt;To jest pierwszy akapit.&lt;/p&gt;
+&lt;p&gt;To jest drugi akapit.&lt;/p&gt;
+</pre>
+
+            <h3>Efekt działania</h3>
+
+            <div class="przyklad">
+                <p>To jest pierwszy akapit.</p>
+                <p>To jest drugi akapit.</p>
+            </div>
+
+            <h3>Wyróżnianie tekstu</h3>
+
+            <p>
+                HTML umożliwia wyróżnianie fragmentów tekstu za pomocą różnych znaczników.
+            </p>
+
+            <pre>
+&lt;strong&gt;Pogrubienie&lt;/strong&gt;
+&lt;em&gt;Pochylenie&lt;/em&gt;
+</pre>
+
+            <h3>Efekt działania</h3>
+
+            <div class="przyklad">
+                <p><strong>Pogrubienie</strong></p>
+                <p><em>Pochylenie</em></p>
+            </div>
+
+            <h3>Cytaty krótkie - &lt;q&gt;</h3>
+
+            <p>
+                Znacznik <strong>&lt;q&gt;</strong> służy do oznaczania krótkich cytatów
+                znajdujących się wewnątrz tekstu.
+            </p>
+
+            <pre>
+&lt;p&gt;Albert Einstein powiedział:
+    &lt;q&gt;Wyobraźnia jest ważniejsza od wiedzy.&lt;/q&gt;
+&lt;/p&gt;
+</pre>
+
+            <h3>Efekt działania</h3>
+
+            <div class="przyklad">
+                <p>Albert Einstein powiedział:
+                <q>Wyobraźnia jest ważniejsza od wiedzy.</q></p>
+            </div>
+
+            <h3>Cytaty blokowe - &lt;blockquote&gt;</h3>
+
+            <p>
+                Znacznik <strong>&lt;blockquote&gt;</strong> służy do umieszczania dłuższych cytatów.
+            </p>
+
+            <pre>
+&lt;blockquote&gt;
+    Internet jest dla wszystkich.
+&lt;/blockquote&gt;
+</pre>
+
+            <h3>Efekt działania</h3>
+
+            <div class="przyklad">
+                <blockquote>
+                    Internet jest dla wszystkich.
+                </blockquote>
+            </div>
+
+            <h3>Źródło cytatu - &lt;cite&gt;</h3>
+
+            <p>
+                Znacznik <strong>&lt;cite&gt;</strong> służy do podawania źródła cytatu,
+                książki, filmu lub innego dzieła.
+            </p>
+
+            <pre>
+&lt;p&gt;
+    &lt;cite&gt;Pan Tadeusz&lt;/cite&gt; - Adam Mickiewicz
+&lt;/p&gt;
+</pre>
+
+            <h3>Efekt działania</h3>
+
+            <div class="przyklad">
+                <p><cite>Pan Tadeusz</cite> - Adam Mickiewicz</p>
+            </div>
+
+            <h3>Kod programu - &lt;code&gt;</h3>
+
+            <p>
+                Znacznik <strong>&lt;code&gt;</strong> służy do oznaczania fragmentów kodu.
+            </p>
+
+            <pre>
+&lt;code&gt;cout &lt;&lt; "Witaj świecie!";&lt;/code&gt;
+</pre>
+
+            <h3>Efekt działania</h3>
+
+            <div class="przyklad">
+                <code>cout &lt;&lt; "Witaj świecie!";</code>
+            </div>
+
+            <h3>Blok kodu - &lt;pre&gt;</h3>
+
+            <p>
+                Znacznik <strong>&lt;pre&gt;</strong> zachowuje wszystkie spacje i przejścia
+                do nowej linii, dzięki czemu często używa się go do prezentowania kodu.
+            </p>
+
+            <pre>
+&lt;pre&gt;
+    for(int i=0; i&lt;5; i++)
+    {
+        cout &lt;&lt; i;
+    }
+&lt;/pre&gt;
+</pre>
+
+            <h3>Efekt działania</h3>
+
+            <div class="przyklad">
+            <pre>
+for(int i=0; i&lt;5; i++)
+    {
+        cout &lt;&lt; i;
+    }
+</pre>
+            </div>
+
+            <h3>Łamanie wiersza</h3>
+
+            <p>
+                Znacznik <strong>&lt;br&gt;</strong> pozwala przejść do nowej linii bez tworzenia
+                nowego akapitu.
+            </p>
+
+            <pre>
+Pierwsza linia&lt;br&gt;
+Druga linia
+</pre>
+
+            <h3>Efekt działania</h3>
+
+            <div class="przyklad">
+                Pierwsza linia<br>
+                Druga linia
+            </div>
+
+            <p>
+                Tagi tekstowe są podstawą tworzenia treści na stronach internetowych.
+                Pozwalają zachować odpowiednią strukturę dokumentu oraz poprawiają jego
+                czytelność dla użytkowników i wyszukiwarek internetowych.
+            </p>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

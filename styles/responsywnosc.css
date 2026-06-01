@@ -1,0 +1,50 @@
+.demo-live {
+    padding: 15px;
+    border: 2px solid black;
+    background: rgb(70, 70, 70);
+    margin-bottom: 10px;
+}
+
+.resp-box {
+    background: rgb(100, 100, 100);
+}
+
+@media (max-width: 768px) {
+    .resp-box {
+        background: lightgray;
+        color: black;
+    }
+}
+
+.flex-fake {
+    overflow: auto;
+}
+
+.flex-fake div {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.menu-demo a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px;
+    border: 2px solid black;
+    background: rgb(0, 255, 247);
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .menu-demo a {
+        display: block;
+        width: 100%;
+    }
+}
+
+.unit-demo h1 {
+    font-size: 5vw;
+}

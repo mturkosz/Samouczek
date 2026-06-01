@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="#">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Znaczniki semantyczne</h2>
+
+            <p>
+                Znaczniki semantyczne w HTML to takie elementy, które mają znaczenie opisowe.
+                Informują przeglądarkę i programistę, jaką rolę pełni dany fragment strony.
+            </p>
+
+            <p>
+                Dzięki nim kod jest bardziej czytelny, lepiej zorganizowany i przyjazny dla SEO.
+            </p>
+
+
+            <h3>Najważniejsze znaczniki semantyczne</h3>
+
+            <ul>
+                <li><strong>&lt;header&gt;</strong> – nagłówek strony lub sekcji</li>
+                <li><strong>&lt;nav&gt;</strong> – nawigacja</li>
+                <li><strong>&lt;main&gt;</strong> – główna treść strony</li>
+                <li><strong>&lt;section&gt;</strong> – sekcja tematyczna</li>
+                <li><strong>&lt;article&gt;</strong> – niezależny artykuł</li>
+                <li><strong>&lt;aside&gt;</strong> – treść poboczna</li>
+                <li><strong>&lt;footer&gt;</strong> – stopka</li>
+            </ul>
+
+            <h3>Przykład struktury strony</h3>
+
+            <pre>
+&lt;header&gt;
+    &lt;h1&gt;Moja strona&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+    &lt;a href="../index.html"&gt;Strona główna&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+    &lt;section&gt;
+        &lt;h2&gt;O mnie&lt;/h2&gt;
+        &lt;p&gt;Treść sekcji...&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;article&gt;
+        &lt;h2&gt;Artykuł&lt;/h2&gt;
+        &lt;p&gt;Treść artykułu...&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;aside&gt;
+    &lt;p&gt;Dodatkowe informacje&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;footer&gt;
+    &copy; 2026
+&lt;/footer&gt;
+</pre>
+
+            <h3>Jak to wygląda w praktyce</h3>
+
+            <div class="przyklad">
+
+                <header style="border:1px solid black; padding:5px; background: none;">HEADER – nagłówek</header>
+
+                <nav style="border:1px solid black; padding:5px; margin-top:5px; background: none; box-shadow: none;">NAV – menu</nav>
+
+                <main style="border:1px solid black; padding:5px; margin-top:5px; min-height: 15vh;">
+                    MAIN – główna treść
+                    <section style="border:1px solid black; padding:5px; margin-top:5px;">
+                        SECTION – sekcja
+                    </section>
+
+                    <article style="border:1px solid black; padding:5px; margin-top:5px;">
+                        ARTICLE – artykuł
+                    </article>
+                </main>
+
+                <aside style="border:1px solid black; padding:5px; margin-top:5px;">
+                    ASIDE – treść poboczna
+                </aside>
+
+                <footer style="border:1px solid black; padding:5px; margin-top:5px; background: none; font-weight: normal;">
+                    FOOTER – stopka
+                </footer>
+
+            </div>
+
+            <h3>Po co używać semantycznych znaczników?</h3>
+
+            <ul>
+                <li>lepsza czytelność kodu</li>
+                <li>lepsze SEO</li>
+                <li>łatwiejsze utrzymanie strony</li>
+                <li>poprawna struktura dokumentu</li>
+            </ul>
+
+            <h3>Podsumowanie</h3>
+
+            <p>
+                Znaczniki semantyczne nie zmieniają wyglądu strony,
+                ale nadają jej strukturę i znaczenie.
+                Dzięki nim strona jest bardziej profesjonalna i zgodna ze standardami HTML5.
+            </p>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

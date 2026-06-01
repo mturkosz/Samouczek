@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+    <style>
+        div > a:hover {
+            color: red;
+        }
+        input[type="text"] {
+            border: 2px solid black;
+            background: white;
+        }
+        #bigger::first-letter{
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="#">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Selektory CSS</h2>
+
+            <p>
+                Selektory CSS służą do wybierania elementów HTML, którym nadajemy style.
+                Dzięki nim możemy precyzyjnie określić, co ma wyglądać w jaki sposób.
+            </p>
+
+            <h3>1. Selektor uniwersalny</h3>
+
+            <p>Styluje wszystkie elementy na stronie.</p>
+
+            <div class="przyklad">
+                <pre>
+* {
+    margin: 0;
+    padding: 0;
+}
+</pre>
+            </div>
+
+            <h3>2. Selektor typu</h3>
+
+            <p>Wybiera wszystkie elementy danego typu.</p>
+
+            <div class="przyklad">
+                <pre>
+p {
+    color: white;
+}
+</pre>
+            </div>
+
+            <h3>3. Selektor klasy</h3>
+
+            <p>Może być używany wielokrotnie.</p>
+
+            <div class="przyklad">
+                <pre>
+.kolor {
+    color: red;
+}
+</pre>
+
+                <p class="kolor">Przykład klasy</p>
+            </div>
+
+            <h3>4. Selektor ID</h3>
+
+            <p>Unikalny – tylko jeden element na stronie.</p>
+
+            <div class="przyklad">
+                <pre>
+#naglowek {
+    font-size: 30px;
+}
+</pre>
+
+                <p id="naglowek">Przykład ID</p>
+            </div>
+
+            <h3>5. Selektor grupowy</h3>
+
+            <p>Pozwala stylować kilka elementów jednocześnie.</p>
+
+            <div class="przyklad">
+                <pre>
+h1, h3, p {
+    color: aqua;
+}
+</pre>
+            </div>
+
+            <h3>6. Selektor potomka</h3>
+
+            <p>Wybiera elementy znajdujące się wewnątrz innych.</p>
+
+            <div class="przyklad">
+                <pre>
+div p {
+    color: yellow;
+}
+</pre>
+
+                <div>
+                    <p>Jest potomkiem diva</p>
+                </div>
+            </div>
+
+            <h3>7. Selektor dziecka</h3>
+
+            <p>Wybiera tylko bezpośrednie dzieci.</p>
+
+            <div class="przyklad">
+                <pre>
+div > p {
+    color: lime;
+}
+</pre>
+
+            </div>
+
+            <h3>8. Selektor atrybutu</h3>
+
+            <p>Wybiera elementy po atrybucie.</p>
+
+            <div class="przyklad">
+                <pre>
+input[type="text"] {
+    border: 2px solid black;
+    background: white;
+}
+</pre>
+
+                <input type="text" placeholder="Przykład">
+            </div>
+
+            <h3>9. Selektor pseudoklasy</h3>
+
+            <p>Reaguje na stan elementu.</p>
+
+            <div class="przyklad">
+                <pre>
+a:hover {
+    color: red;
+}
+</pre>
+
+                <a href="#">Najedź na mnie</a>
+            </div>
+
+            <h3>10. Selektor pseudoelementu</h3>
+
+            <p>Styluje fragment elementu.</p>
+
+            <div class="przyklad">
+                <pre>
+p::first-letter {
+    font-size: 30px;
+}
+</pre>
+
+                <p id="bigger">Przykład tekstu</p>
+            </div>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

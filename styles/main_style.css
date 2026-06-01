@@ -1,0 +1,341 @@
+* {
+    box-sizing: border-box;
+}
+
+main a{
+    color: aqua;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    color-scheme: dark;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+#uklad {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: rgb(100, 100, 100);
+}
+
+header {
+    margin: 0;
+    height: 12vh;
+    background: rgb(41, 41, 41);
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 7vh;
+}
+
+nav {
+    min-height: 8vh;
+    background: rgb(78, 78, 78);
+    position: sticky;
+    top: 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+nav ul li {
+    position: relative;
+    font-size: 2.5vh;
+}
+
+nav a {
+    color: white;
+    display: inline-block;
+    border: 2px solid black;
+    width: 22vw;
+    margin: 15px;
+    margin-bottom: 0;
+    padding: 10px;
+    background-color: rgb(58, 58, 58);
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    font-weight: bold;
+    color: rgb(139, 208, 254);
+    background-color: rgb(48, 48, 48);
+}
+
+nav a:active {
+    font-weight: bolder;
+    color: rgb(0, 153, 255);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    z-index: 1000;
+}
+
+.submenu li {
+    display: block;
+    z-index: 1000;
+}
+
+.submenu a {
+    width: 22vw;
+    margin: 0;
+    padding: 1vh;
+    border-top: none;
+    border-radius: 0;
+    background-color: rgb(77, 77, 77);
+}
+
+.submenu .ostatni {
+    border-radius: 0 0 10px 10px;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+main {
+    min-height: calc(100vh - 25vh);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 2vw;
+}
+
+h2 {
+    font-size: 6vh;
+    margin: 0;
+    height: fit-content;
+}
+
+h3{
+    font-size: 4vh;
+    margin: 0;
+    height: fit-content;
+}
+
+h4{
+    font-size: 3vh;
+    margin: 0;
+    height: fit-content;
+}
+
+p {
+    font-size: 2.5vh;
+    line-height: 1.5;
+}
+
+footer {
+    font-weight: bold;
+    border-top: 2px solid black;
+    height: 5vh;
+    background: rgb(78, 78, 78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+pre{
+    background-color: rgb(50, 50, 50);
+    border: 2px solid black;
+    padding: 20px;
+    overflow-x: auto;
+    font-size: 2vh;
+}
+
+.przyklad{
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 20px 0;
+}
+
+.przyklad h1{
+    font-size: 2em;
+    padding: 0;
+    margin: 0.67em 0;
+}
+
+.przyklad h2{
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0.83em 0;
+}
+
+.przyklad h3{
+    font-size: 1.17em;
+    padding: 0;
+    margin: 1em 0;
+}
+
+.przyklad code{
+    background-color: #eee;
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: black;
+}
+
+.przyklad blockquote{
+    margin: 10px 0;
+    padding-left: 15px;
+    border-left: 4px solid gray;
+}
+
+.przyklad pre{
+    background-color: #eee;
+    color: black;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.przyklad header,
+.przyklad nav,
+.przyklad main,
+.przyklad section,
+.przyklad article,
+.przyklad aside,
+.przyklad footer {
+    margin: 0;
+    padding: 5px;
+    font-size: 1.8vh;
+}
+
+.przyklad div {
+    border: 1px solid black;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+main ul, main ol {
+    font-size: 2.5vh;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+main ul li, main ol li{
+    margin: 6px 0;
+}
+
+.rameczka{
+    background: rgb(65, 65, 65); 
+    color: white; 
+    padding: 10px;
+}
+
+@media screen and (max-width: 1240px) {
+    main{
+        min-height: calc(100vh - 15vh);
+    }
+}
+@media screen and (max-width: 940px) {
+
+    header {
+        height: auto;
+    }
+
+    h1 {
+        font-size: 4.5vh;
+        padding: 15px;
+    }
+
+    nav {
+        position: static;
+        min-height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav a {
+        margin: 0;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid black;
+    }
+
+    .submenu {
+        position: static;
+        display: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .submenu .ostatni {
+        border-radius: 0;
+    }
+
+    .submenu a {
+        width: 100%;
+        margin: 0;
+        padding: 15px 0;
+        background-color: rgb(90, 90, 90);
+        border-bottom: 1px solid rgb(60, 60, 60);
+    }
+
+    nav ul li:hover .submenu {
+        display: block;
+    }
+
+    h2 {
+        font-size: 3.5vh;
+    }
+
+    h3{
+        font-size: 2.5vh;
+    }
+
+    h4{
+        font-size: 2vh;
+    }
+
+    main ul, main ol{
+        font-size: 2.25vh;
+    }
+
+    p {
+        font-size: 2.25vh;
+    }
+
+    table {
+        font-size: 1.8vh;
+    }
+
+    table th, table td {
+        padding: 6px;
+    }
+
+}

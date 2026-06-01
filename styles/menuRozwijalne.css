@@ -1,0 +1,163 @@
+.demo-live {
+    padding: 15px;
+    border: 2px solid black;
+    background-color: rgb(70, 70, 70);
+    margin-bottom: 20px;
+    overflow-x: auto;
+    overflow-y: visible;
+}
+
+.menu-poziome, .menu-pionowe{
+    height: 40vh;
+    position: relative;
+    z-index: 1;
+}
+.menu-poziome ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-poziome > ul > li {
+    position: relative;
+}
+
+.menu-poziome a {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background: rgb(230, 230, 230);
+    border: 1px solid black;
+}
+
+.menu-poziome ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+}
+
+.menu-poziome li:hover > ul {
+    display: block;
+}
+
+.menu-poziome ul ul a {
+    border-top: none;
+}
+
+.menu-pionowe ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: block;
+    justify-content: unset;
+}
+
+.menu-pionowe li {
+    position: relative;
+    margin: 0;
+}
+
+.menu-pionowe > ul > li {
+    display: block;
+}
+
+.menu-pionowe a {
+    display: block;
+    width: 140px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background: rgb(230, 230, 230);
+    border: 1px solid black;
+}
+
+.menu-pionowe ul ul {
+    display: none;
+    position: absolute;
+    left: 140px;
+    top: -15px;
+    z-index: 10;
+}
+
+.menu-pionowe li:hover > ul {
+    display: block;
+}
+
+.details-menu summary {
+    cursor: pointer;
+    padding: 10px;
+    width: 140px;
+    background: rgb(94, 94, 94);
+    border: 1px solid black;
+}
+
+.details-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.details-menu li a {
+    display: block;
+    width: 140px;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+    background: rgb(240, 240, 240);
+    border: 1px solid black;
+    border-top: none;
+}
+
+.details-menu li a:hover {
+    background: rgb(200, 200, 200);
+}
+
+@media screen and (max-width: 940px) {
+    .menu-poziome, .menu-pionowe {
+        height: auto;
+        min-height: 35vh;
+    }
+
+    .menu-pionowe li,
+    .menu-poziome li {
+        margin: 0;
+    }
+
+    .menu-pionowe ul ul {
+        top: 0;
+    }
+
+    .menu-poziome > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 5px;
+    }
+
+    .menu-poziome > ul > li {
+        width: auto;
+        flex: none;
+    }
+
+    .menu-poziome a,
+    .menu-poziome ul ul a {
+        width: 100px;
+    }
+
+    .menu-poziome ul ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .menu-poziome li:hover > ul,
+    .menu-pionowe li:hover > ul {
+        display: block;
+    }
+}

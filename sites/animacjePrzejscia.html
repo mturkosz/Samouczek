@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+    <link rel="stylesheet" href="../styles/animacje.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="#">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+
+            <h2>Animacje i przejścia CSS</h2>
+
+            <p>
+                Animacje w CSS pozwalają na tworzenie dynamicznych efektów wizualnych.
+                Wyróżniamy przejścia (transition) oraz animacje (animation).
+            </p>
+
+            <h3>1. Transition – podstawy</h3>
+
+            <p>Transition pozwala płynnie zmieniać właściwości elementu.</p>
+
+            <div class="przyklad">
+                <pre>
+.box {
+    background: red;
+    width: 100px;
+    height: 100px;
+    transition: 0.3s;
+}
+
+.box:hover {
+    background: blue;
+}
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <div class="box t1">HOVER</div>
+            </div>
+
+            <h3>2. Transition – kilka właściwości</h3>
+
+            <div class="przyklad">
+                <pre>
+.box {
+    background: green;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.box:hover {
+    background: orange;
+    transform: scale(1.2);
+}
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <div class="box t2">HOVER</div>
+            </div>
+
+            <h3>3. Transform – przesunięcia</h3>
+
+            <div class="przyklad">
+                <pre>
+.box:hover {
+    transform: translateX(50px);
+}
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <div class="box t3">MOVE</div>
+            </div>
+
+            <h3>4. Transform – obrót</h3>
+
+            <div class="przyklad">
+                <pre>
+.box:hover {
+    transform: rotate(20deg);
+}
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <div class="box t4">ROTATE</div>
+            </div>
+
+            <h3>5. Transform – skala</h3>
+
+            <div class="przyklad">
+                <pre>
+.box:hover {
+    transform: scale(1.3);
+}
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <div class="box t5">SCALE</div>
+            </div>
+
+            <h3>6. Podstawowa animacja</h3>
+
+            <div class="przyklad">
+                <pre>
+@keyframes ruch {
+    from { transform: translateX(0); }
+    to { transform: translateX(200px); }
+}
+
+.box {
+    animation: ruch 2s infinite;
+}
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <div class="box a1"></div>
+            </div>
+
+            <h3>7. Animacja z większą ilością etapów</h3>
+
+            <div class="przyklad">
+                <pre>
+@keyframes kolor {
+    0% { background: red; }
+    50% { background: yellow; }
+    100% { background: blue; }
+}
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <div class="box a2"></div>
+            </div>
+
+            <h3>8. Animacja – ruch + kolor</h3>
+
+            <div class="przyklad">
+                <pre>
+@keyframes combo {
+    0% { transform: translateX(0); background: red; }
+    50% { transform: translateX(150px); background: green; }
+    100% { transform: translateX(0); background: blue; }
+}
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <div class="box a3"></div>
+            </div>
+
+            <h3>9. Opóźnienie animacji</h3>
+
+            <div class="przyklad">
+                <pre>
+.box {
+    animation: ruch 2s infinite;
+    animation-delay: 1s;
+}
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <div class="box a4"></div>
+            </div>
+
+            <h3>10. Funkcje czasowe animacji</h3>
+
+            <p>
+                Funkcja czasowa określa tempo wykonywania animacji. Dzięki niej można sprawić,
+                że animacja będzie poruszać się ze stałą prędkością lub przyspieszać i zwalniać.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+.box {
+    animation: ruch 3s infinite linear;
+}
+
+.box {
+    animation: ruch 3s infinite ease;
+}
+
+.box {
+    animation: ruch 3s infinite ease-in;
+}
+
+.box {
+    animation: ruch 3s infinite ease-out;
+}
+
+.box {
+    animation: ruch 3s infinite ease-in-out;
+}
+</pre>
+            </div>
+
+            <div class="demo-live timing-functions">
+
+                <div class="anim-row">
+                    <span>linear</span>
+                    <div class="box linear"></div>
+                </div>
+
+                <div class="anim-row">
+                    <span>ease</span>
+                    <div class="box ease"></div>
+                </div>
+
+                <div class="anim-row">
+                    <span>ease-in</span>
+                    <div class="box ease-in"></div>
+                </div>
+
+                <div class="anim-row">
+                    <span>ease-out</span>
+                    <div class="box ease-out"></div>
+                </div>
+
+                <div class="anim-row">
+                    <span>ease-in-out</span>
+                    <div class="box ease-in-out"></div>
+                </div>
+
+            </div>
+
+            <ul>
+                <li><strong>linear</strong> – stała prędkość przez całą animację.</li>
+                <li><strong>ease</strong> – wolny start, szybszy środek, wolny koniec.</li>
+                <li><strong>ease-in</strong> – animacja rozpoczyna się powoli.</li>
+                <li><strong>ease-out</strong> – animacja kończy się powoli.</li>
+                <li><strong>ease-in-out</strong> – powolny początek i koniec.</li>
+            </ul>
+
+            <h3>11. Kierunek animacji</h3>
+
+            <p>
+                Właściwość <strong>animation-direction</strong> określa, w jaki sposób animacja ma się powtarzać.
+                Może odtwarzać się normalnie, od końca do początku lub zmieniać kierunek po każdym cyklu.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+.normal {
+    animation-direction: normal;
+}
+
+.reverse {
+    animation-direction: reverse;
+}
+
+.alternate {
+    animation-direction: alternate;
+}
+
+.alternate-reverse {
+    animation-direction: alternate-reverse;
+}
+</pre>
+            </div>
+
+            <div class="demo-live direction-demo">
+
+                <div class="anim-row">
+                    <span>normal</span>
+                    <div class="box normal"></div>
+                </div>
+
+                <div class="anim-row">
+                    <span>reverse</span>
+                    <div class="box reverse"></div>
+                </div>
+
+                <div class="anim-row">
+                    <span>alternate</span>
+                    <div class="box alternate"></div>
+                </div>
+
+                <div class="anim-row">
+                    <span>alternate-reverse</span>
+                    <div class="box alternate-reverse"></div>
+                </div>
+
+            </div>
+
+            <ul>
+                <li><strong>normal</strong> – od początku do końca.</li>
+                <li><strong>reverse</strong> – od końca do początku.</li>
+                <li><strong>alternate</strong> – tam i z powrotem.</li>
+                <li><strong>alternate-reverse</strong> – najpierw z powrotem, potem tam.</li>
+            </ul>
+
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

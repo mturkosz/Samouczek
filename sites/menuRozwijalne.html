@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+    <link rel="stylesheet" href="../styles/menuRozwijalne.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="#" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Menu rozwijalne</h2>
+
+            <p>
+                Menu rozwijalne jest jednym z najważniejszych elementów każdej strony internetowej.
+                Pozwala ono na uporządkowanie dużej liczby linków w taki sposób, aby użytkownik nie był
+                przytłoczony wszystkimi opcjami naraz.
+            </p>
+
+            <p>
+                Zamiast pokazywać wszystkie podstrony od razu, część z nich jest ukryta i pojawia się dopiero
+                po wykonaniu akcji przez użytkownika, najczęściej po najechaniu kursorem myszy lub kliknięciu.
+            </p>
+
+            <p>
+                Dzięki temu strony internetowe stają się bardziej czytelne, estetyczne i wygodne w obsłudze.
+            </p>
+
+            <h3>Menu rozwijalne – jak to działa?</h3>
+
+            <p>
+                W HTML menu tworzy się najczęściej za pomocą listy <strong>&lt;ul&gt;</strong> oraz elementów
+                <strong>&lt;li&gt;</strong>.
+                Każdy element listy może zawierać kolejną listę, która jest podmenu.
+            </p>
+
+            <p>
+                CSS odpowiada za to, aby podmenu było domyślnie ukryte i pojawiało się dopiero po interakcji
+                użytkownika.
+                Najczęściej wykorzystuje się do tego pseudoklasę <strong>:hover</strong>.
+            </p>
+
+            <h3>1. Menu poziome (najczęściej spotykane)</h3>
+
+            <p>
+                Menu poziome znajduje się zwykle na górze strony. Główne opcje są ułożone obok siebie,
+                a po najechaniu na jedną z nich rozwija się lista podopcji.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+nav ul li:hover &gt; ul {
+    display: block;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+}
+</pre>
+            </div>
+
+            <div class="demo-live">
+
+                <nav class="menu-poziome">
+
+                    <ul>
+                        <li><a href="#">HTML</a>
+                            <ul>
+                                <li><a href="#">Tabele</a></li>
+                                <li><a href="#">Tagi</a></li>
+                                <li><a href="#">Obrazy</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">CSS</a>
+                            <ul>
+                                <li><a href="#">Tło</a></li>
+                                <li><a href="#">Float</a></li>
+                                <li><a href="#">SVG</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </nav>
+
+            </div>
+
+            <p>
+                Tego typu menu jest bardzo popularne, ponieważ pozwala szybko przechodzić między sekcjami strony
+                bez konieczności przewijania.
+            </p>
+
+            <h3>2. Menu pionowe</h3>
+
+            <p>
+                Menu pionowe działa podobnie, jednak elementy ustawione są jeden pod drugim.
+                Po najechaniu na daną opcję pojawia się podmenu przesunięte w bok.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+nav ul ul {
+    position: absolute;
+    left: 140px;
+    display: none;
+}
+</pre>
+            </div>
+
+            <div class="demo-live">
+
+                <nav class="menu-pionowe">
+
+                    <ul>
+                        <li><a href="#">HTML</a>
+                            <ul>
+                                <li><a href="#">Struktura</a></li>
+                                <li><a href="#">Listy</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">CSS</a>
+                            <ul>
+                                <li><a href="#">Float</a></li>
+                                <li><a href="#">Flexbox</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </nav>
+
+            </div>
+
+            <p>
+                Ten typ menu często stosuje się w panelach bocznych lub stronach edukacyjnych.
+            </p>
+
+            <h3>3. Menu rozwijalne bez CSS – details i summary</h3>
+
+            <p>
+                Nowoczesny HTML pozwala tworzyć menu rozwijalne bez użycia CSS i JavaScript.
+                Służą do tego znaczniki <strong>&lt;details&gt;</strong> oraz <strong>&lt;summary&gt;</strong>.
+            </p>
+
+            <p>
+                Jest to bardzo wygodne rozwiązanie, ponieważ działa automatycznie po kliknięciu
+                i nie wymaga dodatkowych skryptów ani pseudoklas.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+&lt;details&gt;
+    &lt;summary&gt;HTML&lt;/summary&gt;
+
+    &lt;ul&gt;
+        &lt;li&gt;Struktura&lt;/li&gt;
+        &lt;li&gt;Listy&lt;/li&gt;
+        &lt;li&gt;Tabele&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/details&gt;
+</pre>
+            </div>
+
+            <div class="demo-live">
+
+                <details class="details-menu">
+                    <summary>HTML</summary>
+
+                    <ul>
+                        <li><a href="#">Struktura dokumentu</a></li>
+                        <li><a href="#">Listy</a></li>
+                        <li><a href="#">Tabele</a></li>
+                    </ul>
+
+                </details>
+
+            </div>
+
+            <p>
+                Takie menu jest szczególnie przydatne na urządzeniach mobilnych,
+                ponieważ użytkownik nie musi najeżdżać kursorem myszy – wystarczy kliknięcie.
+            </p>
+
+            <h3>Zalety menu rozwijalnych</h3>
+
+            <p>
+                Menu rozwijalne mają wiele zalet i dlatego są tak często stosowane.
+            </p>
+
+            <ul>
+                <li>oszczędzają miejsce na stronie,</li>
+                <li>poprawiają czytelność interfejsu,</li>
+                <li>pozwalają grupować podobne elementy,</li>
+                <li>ułatwiają nawigację na dużych stronach,</li>
+                <li>dobrze działają również na urządzeniach mobilnych.</li>
+            </ul>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

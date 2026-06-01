@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="#">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Odnośniki i obrazy</h2>
+
+            <p>
+                Odnośniki i obrazy są podstawowymi elementami stron internetowych.
+                Dzięki nim możemy przechodzić między stronami oraz wyświetlać grafikę.
+            </p>
+
+            <h3>Odnośniki - &lt;a&gt;</h3>
+
+            <p>
+                Znacznik <strong>&lt;a&gt;</strong> (anchor) służy do tworzenia linków.
+                Pozwala on przechodzić do innych stron internetowych lub do konkretnych miejsc
+                na tej samej stronie.
+            </p>
+
+            <h4>Przykład linku zewnętrznego</h4>
+
+            <pre>
+&lt;a href="https://www.google.com"&gt;Przejdź do Google&lt;/a&gt;
+</pre>
+
+            <div class="przyklad">
+                <a href="https://www.google.com">Przejdź do Google</a>
+            </div>
+
+            <h4>Przykład linku w nowej karcie</h4>
+
+            <pre>
+&lt;a href="https://www.google.com" target="_blank"&gt;Otwórz Google&lt;/a&gt;
+</pre>
+
+            <div class="przyklad">
+                <a href="https://www.google.com" target="_blank">Otwórz Google</a>
+            </div>
+
+            <h4>Link lokalny</h4>
+
+            <pre>
+&lt;a href="index.html"&gt;Przejdź do kontaktu&lt;/a&gt;
+</pre>
+
+            <div class="przyklad">
+                <a href="../index.html">Przejdź do strony głównej</a>
+            </div>
+
+            <h3>Obrazy - &lt;img&gt;</h3>
+
+            <p>
+                Znacznik <strong>&lt;img&gt;</strong> służy do wyświetlania obrazów na stronie.
+                Jest to znacznik samodomykający.
+            </p>
+
+            <h4>Podstawowy obraz</h4>
+
+            <pre>
+&lt;img src="obraz.jpg" alt="Opis obrazu"&gt;
+</pre>
+
+            <div class="przyklad">
+                <img src="../img/obraz.jpg" alt="Przykładowy obraz" width="95%">
+            </div>
+
+            <h4>Atrybuty obrazów</h4>
+
+            <p>
+                Najważniejsze atrybuty znacznika <strong>&lt;img&gt;</strong>:
+            </p>
+
+            <ul>
+                <li><strong>src</strong> – ścieżka do pliku graficznego</li>
+                <li><strong>alt</strong> – tekst alternatywny (ważny dla SEO i dostępności)</li>
+                <li><strong>width</strong> – szerokość obrazu</li>
+                <li><strong>height</strong> – wysokość obrazu</li>
+            </ul>
+
+            <pre>
+&lt;img src="obraz.jpg" alt="Opis" width="300"&gt;
+</pre>
+
+            <div class="przyklad">
+                <img src="../img/obraz.jpg" alt="Przykład obrazu" width="200">
+            </div>
+
+            <h3>Link jako obraz</h3>
+
+            <p>
+                Możemy połączyć obraz i odnośnik, aby kliknięcie w obraz przenosiło na inną stronę.
+            </p>
+
+            <pre>
+&lt;a href="https://www.google.com"&gt;
+    &lt;img src="obraz.jpg" alt="Kliknij mnie"&gt;
+&lt;/a&gt;
+</pre>
+
+            <div class="przyklad">
+                <a href="https://www.google.com" target="_blank">
+                    <img src="../img/obraz.jpg" alt="Klikalny obraz" width="80%">
+                </a>
+            </div>
+
+            <h3>Podsumowanie</h3>
+
+            <p>
+                Znacznik <strong>&lt;a&gt;</strong> odpowiada za nawigację po stronach,
+                a <strong>&lt;img&gt;</strong> za wyświetlanie grafik. Połączenie tych dwóch
+                elementów pozwala tworzyć interaktywne i atrakcyjne wizualnie strony internetowe.
+            </p>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

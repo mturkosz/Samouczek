@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="#">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Multimedia i osadzanie treści</h2>
+
+            <p>
+                Multimedia w HTML to elementy pozwalające dodawać obrazy, dźwięki, filmy oraz treści z innych stron.
+                Dzięki nim strona staje się bardziej nowoczesna i interaktywna.
+            </p>
+
+            <h3>Obraz – &lt;img&gt;</h3>
+
+            <p>Znacznik <strong>&lt;img&gt;</strong> służy do wyświetlania obrazów.</p>
+
+            <pre>
+&lt;img src="obraz.jpg" alt="Przykładowy obraz"&gt;
+</pre>
+
+            <div class="przyklad">
+                <img src="../img/obraz.jpg" alt="Przykładowy obraz" width="95%">
+            </div>
+
+            <h3>Audio – &lt;audio&gt;</h3>
+
+            <p>Znacznik <strong>&lt;audio&gt;</strong> służy do odtwarzania dźwięku.</p>
+
+            <pre>
+&lt;audio controls&gt;
+    &lt;source src="blues.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+</pre>
+
+            <div class="przyklad">
+                <audio controls>
+                    <source src="../audio/blues.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <h3>Wideo – &lt;video&gt;</h3>
+
+            <p>Znacznik <strong>&lt;video&gt;</strong> służy do wyświetlania filmów.</p>
+
+            <pre>
+&lt;video width="400" controls&gt;
+    &lt;source src="blues1.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+</pre>
+
+            <div class="przyklad">
+                <video width="400" controls>
+                    <source src="../video/blues1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <h3>Google Maps – &lt;iframe&gt;</h3>
+
+            <p>Znacznik <strong>&lt;iframe&gt;</strong> pozwala osadzić inne strony, np. mapy.</p>
+
+            <pre>
+&lt;iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12157.085716051834!2d19.917726199326513!3d50.045161577006986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b7a5a0e622b%3A0xd5d25c4b488e7d88!2sTechnikum%20%C5%81%C4%85czno%C5%9Bci%20nr%2014%20w%20Krakowie!5e1!3m2!1spl!2spl!4v1780233658533!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"&gt;&lt;/iframe&gt;
+</pre>
+
+            <div class="przyklad">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12157.085716051834!2d19.917726199326513!3d50.045161577006986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b7a5a0e622b%3A0xd5d25c4b488e7d88!2sTechnikum%20%C5%81%C4%85czno%C5%9Bci%20nr%2014%20w%20Krakowie!5e1!3m2!1spl!2spl!4v1780233658533!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <h3>Podsumowanie</h3>
+
+            <p>
+                Multimedia pozwalają dodawać obrazy, dźwięk, wideo oraz treści z innych stron.
+                Dzięki nim strona jest bardziej interaktywna i nowoczesna.
+            </p>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

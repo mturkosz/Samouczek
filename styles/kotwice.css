@@ -1,0 +1,32 @@
+.demo-live {
+    padding: 15px;
+    border: 2px solid black;
+    background: rgb(70, 70, 70);
+}
+
+.demo-live a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px;
+    border: 2px solid black;
+    background: rgb(0, 255, 247);
+    text-decoration: none;
+    color: black;
+}
+
+.long-page {
+    min-height: 400px;
+}
+
+.spacer {
+    height: 250px;
+}
+
+.anchor-menu a {
+    display: block;
+    width: 120px;
+}
+
+html {
+    scroll-behavior: smooth;
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="#">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Tło</h2>
+
+            <p>
+                CSS umożliwia tworzenie tła elementów na różne sposoby:
+                jednolite kolory, obrazy oraz gradienty (płynne przejścia kolorów).
+            </p>
+
+            <h3>1. Kolor tła</h3>
+
+            <p>
+                Najprostsze tło to jednolity kolor ustawiany przez <strong>background-color</strong>.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+div {
+    background-color: lightgray;
+}
+</pre>
+            </div>
+
+            <div style="background-color: lightgray; padding: 20px; color: black;">
+                Przykład tła w kolorze jasnoszarym
+            </div>
+
+            <h3>2. Obraz jako tło</h3>
+
+            <p>
+                Możemy ustawić obraz jako tło elementu używając <strong>background-image</strong>.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+div {
+    background-image: url("obraz.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</pre>
+            </div>
+
+            <div style="
+            background-image: url('../img/skoda.jpg');
+            background-size: cover;
+            color: white;
+            padding: 40px;
+        ">
+                Tło z obrazem
+            </div>
+
+            <h3>3. Właściwości tła</h3>
+
+            <ul>
+                <li><strong>background-repeat</strong> – czy obraz się powtarza</li>
+                <li><strong>background-position</strong> – pozycja obrazu</li>
+                <li><strong>background-size</strong> – rozmiar obrazu</li>
+            </ul>
+
+            <div class="przyklad">
+                <pre>
+div {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+</pre>
+            </div>
+
+            
+<div style="
+            background-image: url('../img/skoda.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            color: white;
+            padding: 40px;
+        ">
+        Tło wyśrodkowane
+    </div>
+            <h3>4. Gradient liniowy</h3>
+
+            <p>
+                Gradient liniowy to płynne przejście kolorów w linii prostej.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+div {
+    background: linear-gradient(to right, red, blue);
+}
+</pre>
+            </div>
+
+            <div style="
+            height: 120px;
+            background: linear-gradient(to right, red, blue);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        ">
+                Linear gradient
+            </div>
+
+            <h3>5. Gradient radialny</h3>
+
+            <p>
+                Gradient radialny rozchodzi się od środka elementu.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+div {
+    background: radial-gradient(circle, yellow, green);
+}
+</pre>
+            </div>
+
+            <div style="
+            height: 120px;
+            background: radial-gradient(circle, yellow, green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        ">
+                Radial gradient
+            </div>
+
+            <h3>6. Skrócony zapis tła</h3>
+
+            <p>
+                Wszystkie właściwości tła można zapisać w jednej linijce.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+div {
+    background: url("tlo.jpg") no-repeat center/cover;
+}
+</pre>
+            </div>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="#">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Struktura dokumentu HTML</h2>
+
+            <p>
+                Każdy dokument HTML posiada określoną strukturę. Dzięki niej przeglądarka wie,
+                jak interpretować zawartość strony. Dokument składa się z kilku podstawowych
+                elementów, takich jak deklaracja typu dokumentu, sekcja nagłówkowa oraz treść strony.
+            </p>
+
+            <p>
+                Poniżej znajduje się przykładowa struktura prostego dokumentu HTML:
+            </p>
+
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Moja strona&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Witaj świecie!&lt;/h1&gt;
+    &lt;p&gt;To jest moja pierwsza strona.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+            <h3>Opis elementów</h3>
+
+            <p>
+                <strong>&lt;!DOCTYPE html&gt;</strong> – informuje przeglądarkę, że dokument został
+                napisany w języku HTML5.
+            </p>
+
+            <p>
+                <strong>&lt;html&gt;</strong> – główny element dokumentu, zawiera całą stronę.
+            </p>
+
+            <p>
+                <strong>&lt;head&gt;</strong> – sekcja zawierająca informacje o stronie, np. kodowanie
+                znaków, autora lub tytuł strony.
+            </p>
+
+            <h3>Znaczniki meta</h3>
+
+            <p>
+                Znaczniki <strong>&lt;meta&gt;</strong> umieszczamy w sekcji
+                <strong>&lt;head&gt;</strong>. Służą one do przekazywania informacji
+                o stronie przeglądarkom, wyszukiwarkom oraz innym programom.
+            </p>
+
+            <p>
+                Najczęściej spotykane znaczniki meta to:
+            </p>
+
+            <pre>
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="author" content="Jan Kowalski"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            </pre>
+
+            <h3>Opis najpopularniejszych metadanych</h3>
+
+            <p>
+                <strong>charset="UTF-8"</strong> – określa kodowanie znaków używane
+                przez stronę. Dzięki temu poprawnie wyświetlane są polskie znaki,
+                takie jak ą, ć, ę, ł, ń, ó, ś, ź i ż.
+            </p>
+
+            <p>
+                <strong>author</strong> – pozwala podać autora strony internetowej.
+            </p>
+
+            <p>
+                <strong>viewport</strong> – odpowiada za prawidłowe wyświetlanie strony
+                na urządzeniach mobilnych i umożliwia tworzenie responsywnych witryn.
+            </p>
+
+            <p>
+                W sekcji <strong>&lt;head&gt;</strong> często umieszcza się również
+                znacznik <strong>&lt;title&gt;</strong>, który określa tytuł strony
+                widoczny na karcie przeglądarki.
+            </p>
+
+            <p>
+                <strong>&lt;body&gt;</strong> – sekcja zawierająca widoczną zawartość strony.
+            </p>
+
+            <h3>Efekt działania kodu</h3>
+
+            <div class="przyklad">
+                <h1>Witaj świecie!</h1>
+                <p>To jest moja pierwsza strona.</p>
+            </div>
+
+            <p>
+                W przeglądarce użytkownik zobaczy jedynie zawartość znajdującą się w sekcji
+                <strong>&lt;body&gt;</strong>. Elementy umieszczone w sekcji
+                <strong>&lt;head&gt;</strong> są wykorzystywane przez przeglądarkę, ale nie są
+                wyświetlane bezpośrednio na stronie.
+            </p>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

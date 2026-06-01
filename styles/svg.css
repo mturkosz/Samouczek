@@ -1,0 +1,25 @@
+.tabela-svg {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 2.2vh;
+}
+
+.tabela-svg th,
+.tabela-svg td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+.tabela-svg th {
+    background-color: rgb(90, 90, 90);
+}
+
+.tabela-svg tr:nth-child(even) {
+    background-color: rgb(70, 70, 70);
+}
+
+.tabela-svg tr:nth-child(odd) {
+    background-color: rgb(60, 60, 60);
+}

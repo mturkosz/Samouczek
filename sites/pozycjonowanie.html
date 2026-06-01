@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="#">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+
+            <h2>Pozycjonowanie</h2>
+
+            <p>
+                Pozycjonowanie w CSS to mechanizm pozwalający określić położenie elementów na stronie internetowej.
+                Dzięki niemu możemy decydować, czy element ma znajdować się w naturalnym układzie dokumentu,
+                zostać przesunięty względem swojej pierwotnej pozycji, czy też zostać całkowicie wyjęty z normalnego
+                przepływu strony.
+            </p>
+
+            <p>
+                Za pozycjonowanie odpowiada właściwość <strong>position</strong>, która może przyjmować pięć wartości:
+            </p>
+
+            <ul>
+                <li><strong>static</strong> – domyślne ustawienie elementu,</li>
+                <li><strong>relative</strong> – pozycjonowanie względem własnej pozycji,</li>
+                <li><strong>absolute</strong> – pozycjonowanie względem najbliższego przodka z określonym position,</li>
+                <li><strong>fixed</strong> – pozycjonowanie względem okna przeglądarki,</li>
+                <li><strong>sticky</strong> – element zachowuje się jak relative, ale może „przykleić się” podczas
+                    przewijania.</li>
+            </ul>
+
+            <p>
+                W kolejnych sekcjach omówione zostanie działanie każdej z tych wartości wraz z przykładami zastosowania.
+            </p>
+
+            <h3>Static</h3>
+
+            <p> Wartość <strong>static</strong> jest domyślnym ustawieniem właściwości <strong>position</strong>. Każdy element HTML posiada ją automatycznie, jeśli nie zostanie określona inna wartość. </p> 
+            <p> Element z ustawieniem static znajduje się w naturalnym przepływie dokumentu. Oznacza to, że układa się jeden pod drugim zgodnie z kolejnością w kodzie HTML. </p> 
+            <p> W przypadku tej wartości właściwości takie jak <strong>top</strong>, <strong>left</strong>, <strong>right</strong> oraz <strong>bottom</strong> nie mają żadnego działania. </p> 
+            <p> W takim elemencie wysokość jest ustalana według zawartości. Element ten ma także dostępną całą szerokość (całą stronę). Ma on też wpływ na inne elementy na stronie. </p>
+
+            <div class="rameczka">
+                ❗Element z ustawieniem <strong>static</strong> znajduje się w naturalnym przepływie dokumentu.
+            </div>
+
+            <div class="przyklad">
+                <div style="border:2px solid white; padding:10px;">
+                    Jestem elementem static (domyślny)
+                </div>
+                <div style="border:2px solid white; padding:10px;">
+                    Układ ustawia mnie pod poprzednim elementem
+                </div>
+            </div>
+
+            <h3>Relative</h3>
+
+            <p> Wartość <strong>relative</strong> pozwala przesunąć element względem jego pierwotnej pozycji w dokumencie. Element nadal pozostaje w normalnym przepływie strony. </p> 
+            <p> Oznacza to, że jego miejsce w układzie jest zachowane, nawet jeśli wizualnie zostanie przesunięty przy użyciu właściwości takich jak <strong>top</strong> czy <strong>left</strong>. </p> 
+            <p> W elemencie z właściwością <strong>position: relative</strong> wysokość jest ustalana według zawartości. Taki element ma także dostępną całą szerokość strony. Wpływa on na inne elementy na znajdujące się na stronie. </p>
+
+            <div class="rameczka">
+                ❗Wartość <strong>relative</strong> pozwala przesunąć element względem jego pierwotnej pozycji.
+            </div>
+
+            <div class="przyklad">
+                <div style="position: relative; top: 20px; left: 20px;
+                border:2px solid white; padding:10px;">
+                    Przesunięty element (relative)
+                </div>
+                <div style="border:2px solid white; padding:10px;">
+                    Miejsce nadal jest zajęte w układzie
+                </div>
+            </div>
+
+            <h3>Absolute</h3>
+
+            <p> Wartość <strong>absolute</strong> powoduje wyjęcie elementu z normalnego układu dokumentu. Nie zajmuje on już miejsca w strukturze strony. </p> 
+            <p> Element pozycjonowany absolutnie ustawia się nad innymi elementami lub zupełnie inaczej. </p> 
+            <p> W przypadku tej wartości właściwości takie jak <strong>top</strong>, <strong>left</strong>, <strong>right</strong> oraz <strong>bottom</strong> działają. </p> 
+            <p> W takim elemencie wysokość jest ustalana według zawartości. Element z tą właściwością ma dostępną całą szerokość strony. Nie wpływa on na inne elementy, które znajdują się na stronie. </p>
+
+            <div class="rameczka">
+                ❗Element z <strong>absolute</strong> jest wyjęty z normalnego układu strony.
+            </div>
+
+            <div class="przyklad" style="position: relative; height: 120px;">
+
+                <div style="position: absolute; top: 10px; right: 10px;
+                border:2px solid white; padding:10px;">
+                    absolute (w rogu)
+                </div>
+
+                <div style="border:2px solid white; padding:10px;">
+                    Normalna treść pozostaje w układzie
+                </div>
+
+            </div>
+
+            <h3>Fixed</h3>
+            <p> Element z ustawieniem <strong>fixed</strong> jest wyjęty z normalnego przepływu dokumentu i pozycjonowany względem okna przeglądarki. </p> 
+            <p> Oznacza to, że jego pozycja nie zmienia się podczas przewijania strony. </p> 
+            <p> Wartość ta jest często wykorzystywana do tworzenia przyklejonych menu, przycisków „Powrót na górę” lub stałych pasków nawigacyjnych. </p> 
+            <p> W elemencie z właściwością <strong>position: fixed</strong> wysokość jest ustalana według zawartości. Element posiadający taką właściwość ma dostępną całą szerokość. Nie ma wpływu na inne elementy znajdujące się na stronie. </p>
+
+            <div class="rameczka">
+                ❗Element z <strong>fixed</strong> jest przyklejony do okna przeglądarki.
+            </div>
+
+            <div class="przyklad">
+                <div style="position: fixed; bottom: 10px; right: 10px;
+                border:2px solid black; padding:10px; background: white;">
+                    fixed (zawsze widoczny)
+                </div>
+
+                <p>
+                    Przewijaj stronę – ten element nie znika.
+                </p>
+            </div>
+
+            <h3>Sticky</h3>
+
+            <p> Wartość <strong>sticky</strong> łączy cechy position: relative oraz position: fixed. </p> 
+            <p> Element zachowuje się jak relative do momentu, aż podczas przewijania osiągnie określoną pozycję (np. top: 0). Wtedy „przykleja się” do wskazanego miejsca. </p> 
+            <p> Sticky jest często stosowane w nagłówkach sekcji, menu (tak jak na tej stronie) lub tabelach. </p>
+
+            <div class="rameczka">
+                ❗<strong>Sticky</strong> łączy cechy relative i fixed.
+            </div>
+
+            <div class="przyklad" style="height: 200px; overflow: auto;">
+
+                <div style="position: sticky; top: 0;
+                background: gray; border:2px solid white; padding:10px;">
+                    Sticky nagłówek
+                </div>
+
+                <p>Treść do przewijania...</p>
+                <p>Treść do przewijania...</p>
+                <p>Treść do przewijania...</p>
+                <p>Treść do przewijania...</p>
+
+            </div>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

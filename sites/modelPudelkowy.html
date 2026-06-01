@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="#">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Model pudełkowy (Box Model)</h2>
+
+            <p>
+                Każdy element w CSS jest traktowany jak prostokątne pudełko.
+                Oznacza to, że każdy element na stronie posiada swoją wewnętrzną strukturę,
+                która wpływa na jego wygląd i zajmowane miejsce.
+            </p>
+
+            <p>
+                Model pudełkowy jest jednym z najważniejszych zagadnień w CSS,
+                ponieważ od niego zależy układ całej strony internetowej.
+            </p>
+
+            <h3>Budowa modelu pudełkowego</h3>
+
+            <p>Każde pudełko składa się z czterech warstw:</p>
+
+            <ul>
+                <li><strong>Content</strong> – właściwa treść elementu (tekst, obraz, inne elementy)</li>
+                <li><strong>Padding</strong> – przestrzeń wewnętrzna między treścią a obramowaniem</li>
+                <li><strong>Border</strong> – obramowanie elementu</li>
+                <li><strong>Margin</strong> – odstęp od innych elementów</li>
+            </ul>
+
+            <h3>Jak działa każda warstwa</h3>
+
+            <p>
+                <strong>Content</strong> to środek elementu, czyli to co widzi użytkownik jako treść.
+                Może to być tekst, obraz lub inne elementy HTML.
+            </p>
+
+            <p>
+                <strong>Padding</strong> tworzy „oddech” wewnątrz elementu.
+                Zwiększa przestrzeń między treścią a obramowaniem, ale nadal znajduje się wewnątrz elementu.
+            </p>
+
+            <p>
+                <strong>Border</strong> to ramka wokół elementu.
+                Może mieć różną grubość, kolor i styl.
+            </p>
+
+            <p>
+                <strong>Margin</strong> odpowiada za odstęp między elementami.
+                Nie wpływa na wygląd elementu, tylko na jego położenie względem innych.
+            </p>
+
+            <h3>Przykład CSS</h3>
+
+            <div class="przyklad">
+                <pre>
+.box {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 5px solid aqua;
+    margin: 30px;
+}
+</pre>
+            </div>
+
+            <p>
+                W powyższym przykładzie element ma określoną szerokość i wysokość,
+                ale jego rzeczywisty rozmiar jest większy przez padding i border.
+            </p>
+
+            <h3>Przekrój modelu pudełkowego</h3>
+
+            <div style="background: rgb(40,40,40); padding: 30px; text-align: center;">
+
+                <div style="background: rgb(90,90,90); padding: 10px; border: 3px dashed red; margin: 10px;">
+                    MARGIN (zewnętrzny odstęp)
+
+                    <div style="background: rgb(110,110,110); padding: 10px; border: 3px solid orange; margin: 10px;">
+                        BORDER (ramka)
+
+                        <div
+                            style="background: rgb(130,130,130); padding: 10px; border: 3px dashed yellow; margin: 10px;">
+                            PADDING (wewnętrzny odstęp)
+
+                            <div style="background: rgb(150,150,150); padding: 20px; border: 2px solid aqua; margin: 10px;">
+                                CONTENT (treść)
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p>
+                Wewnętrzny obszar to content, przestrzeń wokół tekstu to padding,
+                a niebieska ramka to border. Całość jest oddzielona od innych elementów marginesem.
+            </p>
+
+            <h3>Dlaczego box model jest ważny</h3>
+
+            <p>
+                Zrozumienie modelu pudełkowego pozwala uniknąć problemów z układem strony.
+                Bez tej wiedzy elementy mogą „rozjeżdżać się” lub mieć nieprzewidziane rozmiary.
+            </p>
+
+            <p>
+                Jest to szczególnie ważne przy tworzeniu responsywnych stron internetowych.
+            </p>
+
+            <h3>box-sizing</h3>
+
+            <p>
+                Domyślnie szerokość elementu nie uwzględnia paddingu i borderu.
+                Oznacza to, że element może być większy niż ustawiona wartość width.
+            </p>
+
+            <p>
+                Aby uprościć obliczenia, stosuje się:
+            </p>
+
+            <div class="przyklad">
+                <pre>
+* {
+    box-sizing: border-box;
+}
+</pre>
+            </div>
+
+            <p>
+                Dzięki temu padding i border są wliczane do szerokości elementu,
+                co ułatwia projektowanie układu strony.
+            </p>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

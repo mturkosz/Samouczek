@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="#">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+
+            <h2>Menu nawigacyjne</h2>
+
+            <p>
+                Menu nawigacyjne w CSS pozwala tworzyć elementy interfejsu, które umożliwiają poruszanie się po
+                stronie.
+                Możemy budować zarówno menu poziome (np. w nagłówku), jak i menu pionowe (np. w bocznej kolumnie).
+            </p>
+
+            <p>
+                W tym przykładzie wykorzystano również układ strony oparty na float, który dzieli stronę na trzy
+                kolumny.
+            </p>
+
+            <h3>1. Menu poziome w nagłówku</h3>
+
+            <p>
+                Menu w nagłówku jest tworzone z listy <strong>ul</strong>, a elementy <strong>li</strong> ustawiane
+                są obok siebie.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+header ul li {
+    display: inline;
+}
+
+header a {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+</pre>
+            </div>
+
+            <div class="demo-live header-menu">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+
+            <h3>2. Menu pionowe</h3>
+
+            <p>
+                Menu pionowe tworzy się poprzez ustawienie linków jako elementy blokowe.
+                Każdy link zajmuje całą szerokość dostępnej kolumny.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+a {
+    display: block;
+    width: 100px;
+    border: 2px solid black;
+    text-align: center;
+}
+</pre>
+            </div>
+
+            <div class="demo-live vertical-menu">
+                <a href="#">Link 4</a>
+                <a href="#">Link 5</a>
+                <a href="#">Link 6</a>
+            </div>
+
+            <h3>3. Układ strony – 3 kolumny (float)</h3>
+
+            <p>
+                Cały układ strony został podzielony na trzy części:
+                lewa kolumna, środek oraz prawa kolumna.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+#lewa {
+    float: left;
+    width: 140px;
+}
+
+#srodek {
+    float: left;
+    width: 700px;
+}
+
+#prawa {
+    float: right;
+    width: 140px;
+}
+</pre>
+            </div>
+
+            <div class="demo-live layout3menu">
+
+                <div class="lewa">
+                    <a href="#">L1</a>
+                    <a href="#">L2</a>
+                    <a href="#">L3</a>
+                </div>
+
+                <div class="srodek">
+                    <p>Środkowa część strony – tutaj znajduje się główna treść.</p>
+                </div>
+
+                <div class="prawa">
+                    <a href="#">P1</a>
+                    <a href="#">P2</a>
+                    <a href="#">P3</a>
+                </div>
+
+            </div>
+
+            <h3>4. Pseudoklasy linków</h3>
+
+            <p>
+                Linki mogą zmieniać swój wygląd w zależności od stanu: odwiedzony, aktywny lub najechany.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+a:link { background: violet; }
+a:visited { background: cyan; }
+a:hover { background: lightblue; }
+a:active { background: blue; }
+</pre>
+            </div>
+
+            <div class="demo-live link-states">
+                <a href="#">Link testowy</a>
+            </div>
+
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

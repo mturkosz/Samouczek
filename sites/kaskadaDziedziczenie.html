@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+    <link rel="stylesheet" href="../styles/kaskada.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="#">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="rezponsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Kaskada i dziedziczenie</h2>
+
+            <p>
+                CSS działa kaskadowo — oznacza to, że kilka stylów może dotyczyć tego samego elementu,
+                a przeglądarka musi zdecydować który wygra.
+            </p>
+
+            <h3>1. Kaskada – kolejność ma znaczenie</h3>
+
+            <div class="przyklad">
+                <pre>
+p {
+    color: red;
+}
+
+p {
+    color: blue;
+}
+</pre>
+            </div>
+
+            <div style="border:2px solid black; padding:15px;">
+                <p style="color: blue;">
+                    Ten tekst jest NIEBIESKI, bo druga reguła nadpisuje pierwszą.
+                </p>
+            </div>
+
+            <h3>2. Specyficzność – kto ma większą siłę</h3>
+
+            <div class="przyklad">
+                <pre>
+p {
+    color: red;
+}
+
+.klasa {
+    color: green;
+}
+
+#id {
+    color: blue;
+}
+</pre>
+            </div>
+
+            <div style="border:2px solid black; padding:15px;">
+                <p style="color: red;">Zwykły p (czerwony)</p>
+                <p style="color: green;">Klasa (zielony)</p>
+                <p style="color: blue;">ID (niebieski – najsilniejszy)</p>
+            </div>
+
+            <h3>3. !important – wymuszenie stylu</h3>
+
+            <div class="przyklad">
+                <pre>
+p {
+    color: red !important;
+}
+</pre>
+            </div>
+
+            <div style="border:2px solid black; padding:15px;">
+                <p style="color: red;">
+                    Ten tekst byłby nadpisany, ale !important wymusza kolor.
+                </p>
+            </div>
+
+            <h3>4. Dziedziczenie – elementy przejmują styl</h3>
+
+            <div class="przyklad">
+                <pre>
+div {
+    color: blue;
+}
+</pre>
+            </div>
+
+            <div style="color: blue; border:2px solid black; padding:15px;">
+                <p>Ten tekst dziedziczy kolor z diva</p>
+                <p>Każdy element wewnątrz też jest niebieski</p>
+            </div>
+
+            <h3>5. Co NIE jest dziedziczone</h3>
+
+            <p>
+                Nie wszystkie style się dziedziczą — np. border, margin czy background.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+div {
+    border: 2px solid red;
+}
+</pre>
+            </div>
+
+            <div style="border:2px solid red; padding:15px;">
+                <p>Ten tekst NIE ma ramki</p>
+            </div>
+
+            <h3>6. inherit – wymuszenie dziedziczenia</h3>
+
+            <div class="przyklad">
+                <pre>
+p {
+    color: inherit;
+}
+</pre>
+            </div>
+
+            <div style="color: green; border:2px solid black; padding:15px;">
+                <p style="color: inherit;">
+                    Ten tekst wymusza dziedziczenie koloru
+                </p>
+            </div>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

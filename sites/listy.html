@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="#">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Listy</h2>
+
+            <p>
+                Listy służą do prezentowania informacji w uporządkowany i czytelny sposób.
+                W HTML wyróżniamy trzy podstawowe rodzaje list: listy nieuporządkowane,
+                uporządkowane oraz definicji.
+            </p>
+
+            <h3>Lista nieuporządkowana - &lt;ul&gt;</h3>
+
+            <p>
+                Lista nieuporządkowana wyświetla elementy z użyciem punktorów.
+            </p>
+
+            <pre>
+&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+            <h3>Efekt działania</h3>
+
+            <div class="przyklad">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+
+            <h3>Lista uporządkowana - &lt;ol&gt;</h3>
+
+            <p>
+                Lista uporządkowana numeruje kolejne elementy.
+            </p>
+
+<pre>
+&lt;ol&gt;
+    &lt;li&gt;Uruchom edytor kodu&lt;/li&gt;
+    &lt;li&gt;Napisz dokument HTML&lt;/li&gt;
+    &lt;li&gt;Zapisz plik&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+            <h3>Efekt działania</h3>
+
+            <div class="przyklad">
+                <ol>
+                    <li>Uruchom edytor kodu</li>
+                    <li>Napisz dokument HTML</li>
+                    <li>Zapisz plik</li>
+                </ol>
+            </div>
+
+            <h3>Lista definicji - &lt;dl&gt;</h3>
+
+            <p>
+                Lista definicji służy do przedstawiania pojęć i ich opisów.
+                Wykorzystuje znaczniki <strong>&lt;dl&gt;</strong>,
+                <strong>&lt;dt&gt;</strong> oraz <strong>&lt;dd&gt;</strong>.
+            </p>
+
+            <pre>
+&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Język znaczników stron internetowych.&lt;/dd&gt;
+
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Język odpowiedzialny za wygląd strony.&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+
+            <h3>Efekt działania</h3>
+
+            <div class="przyklad">
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>Język znaczników stron internetowych.</dd>
+
+                    <dt>CSS</dt>
+                    <dd>Język odpowiedzialny za wygląd strony.</dd>
+                </dl>
+            </div>
+
+            <h3>Listy zagnieżdżone</h3>
+
+            <p>
+                W HTML można tworzyć listy wewnątrz innych list.
+            </p>
+
+            <pre>
+&lt;ul&gt;
+    &lt;li&gt;HTML
+        &lt;ul&gt;
+            &lt;li&gt;Nagłówki&lt;/li&gt;
+            &lt;li&gt;Listy&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+            <h3>Efekt działania</h3>
+
+            <div class="przyklad">
+                <ul>
+                    <li>HTML
+                        <ul>
+                            <li>Nagłówki</li>
+                            <li>Listy</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <p>
+                Znacznik <strong>&lt;li&gt;</strong> oznacza pojedynczy element listy.
+                Jest on używany zarówno w listach uporządkowanych (<strong>&lt;ol&gt;</strong>),
+                jak i nieuporządkowanych (<strong>&lt;ul&gt;</strong>).
+            </p>
+
+            <p>
+                Listy są bardzo często wykorzystywane do tworzenia menu nawigacyjnych,
+                spisów treści, instrukcji krok po kroku oraz zestawień informacji.
+            </p>
+
+            <h3>Typy numeracji w &lt;ol&gt;</h3>
+
+            <p>
+                Znacznik <strong>&lt;ol&gt;</strong> pozwala zmieniać sposób numerowania listy
+                za pomocą atrybutu <strong>type</strong>.
+            </p>
+
+            <h4>1. Numeracja domyślna (cyfry)</h4>
+
+            <pre>
+&lt;ol type="1"&gt;
+    &lt;li&gt;Jeden&lt;/li&gt;
+    &lt;li&gt;Dwa&lt;/li&gt;
+    &lt;li&gt;Trzy&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+            <div class="przyklad">
+                <ol type="1">
+                    <li>Jeden</li>
+                    <li>Dwa</li>
+                    <li>Trzy</li>
+                </ol>
+            </div>
+
+            <h4>2. Małe litery</h4>
+
+            <pre>
+&lt;ol type="a"&gt;
+    &lt;li&gt;Jabłko&lt;/li&gt;
+    &lt;li&gt;Gruszka&lt;/li&gt;
+    &lt;li&gt;Banan&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+            <div class="przyklad">
+                <ol type="a">
+                    <li>Jabłko</li>
+                    <li>Gruszka</li>
+                    <li>Banan</li>
+                </ol>
+            </div>
+
+            <h4>3. Wielkie litery</h4>
+
+            <pre>
+&lt;ol type="A"&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+            <div class="przyklad">
+                <ol type="A">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ol>
+            </div>
+
+            <h4>4. Cyfry rzymskie (małe)</h4>
+
+            <pre>
+&lt;ol type="i"&gt;
+    &lt;li&gt;Pierwszy&lt;/li&gt;
+    &lt;li&gt;Drugi&lt;/li&gt;
+    &lt;li&gt;Trzeci&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+            <div class="przyklad">
+                <ol type="i">
+                    <li>Pierwszy</li>
+                    <li>Drugi</li>
+                    <li>Trzeci</li>
+                </ol>
+            </div>
+
+            <h4>5. Cyfry rzymskie (duże)</h4>
+
+            <pre>
+&lt;ol type="I"&gt;
+    &lt;li&gt;Start&lt;/li&gt;
+    &lt;li&gt;Środek&lt;/li&gt;
+    &lt;li&gt;Koniec&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+            <div class="przyklad">
+                <ol type="I">
+                    <li>Start</li>
+                    <li>Środek</li>
+                    <li>Koniec</li>
+                </ol>
+            </div>
+
+            <h3>Podsumowanie</h3>
+
+            <p>
+                Atrybut <strong>type</strong> pozwala zmienić wygląd numeracji, ale nie zmienia
+                struktury listy. Elementy nadal są uporządkowane, tylko wyświetlane w inny sposób.
+            </p>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

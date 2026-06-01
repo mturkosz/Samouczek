@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="#" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Mapy odsyłaczy (Image Map)</h2>
+
+            <p>
+                Mapa odsyłaczy pozwala na stworzenie obrazka, który ma kilka klikalnych obszarów.
+                Każdy obszar może prowadzić do innego linku.
+            </p>
+
+            <p>
+                Jest to starsza, ale nadal spotykana technika w HTML.
+            </p>
+
+            <h3>Jak to działa?</h3>
+
+            <p>
+                Używamy:
+            </p>
+
+            <ul>
+                <li><strong>&lt;img usemap&gt;</strong> – przypisuje mapę do obrazka</li>
+                <li><strong>&lt;map&gt;</strong> – definiuje mapę</li>
+                <li><strong>&lt;area&gt;</strong> – klikalne obszary</li>
+            </ul>
+
+            <h3>Przykład kodu</h3>
+
+            <pre>
+&lt;img src="skoda.jpg" usemap="#mapaObrazka"&gt;
+
+&lt;map name="mapaObrazka"&gt;
+    &lt;area target="_blank" alt="Opona" title="Opona" href="https://oponeo.pl" coords="624,770,74" shape="circle"&gt;
+    &lt;area target="_blank" alt="Felga" title="Felga" href="https://eshop.skoda-auto.com/pl_PL/felgi-i-kola-kompletne/c/wheelsAndRims?srsltid=AfmBOopVyH3omd6gWGfHdKCv0o3JBCzwbrKeL8SErMpDH8LwqLtxW-VL" coords="1211,787,55" shape="circle"&gt;
+    &lt;area target="_blank" alt="Lampa przednia" title="Lampa przednia" href="https://www.signeda.pl/skoda-superb-2015-2024-czesci-samochodowe-ml1066/skoda-superb-2015-2024-reflektory-samochodowe-c1331/skoda-superb-2015-2024-lampy-przednie-i-czesci-c1357/skoda-superb-2015-2024-lampa-przednia-c1376" coords="454,696,487,698,513,708,529,695,550,673,518,668,488,671,473,673" shape="poly"&gt;
+    &lt;area target="_blank" alt="Lampa tylnia" title="Lampa tylnia" href="https://www.signeda.pl/skoda-superb-2015-2024-czesci-samochodowe-ml1066/skoda-superb-2015-2024-reflektory-samochodowe-c1331/skoda-superb-2015-2024-lampy-tylne-i-czesci-c1354/skoda-superb-2015-2024-lampa-tyl-c1466" coords="1331,671,1346,710,1385,703,1383,669,1331,669,1331,671,1331,670,1331,671,1331,671,1331,669" shape="poly"&gt;
+    &lt;area target="_blank" alt="Drzwi przednie" title="Drzwi przednie" href="https://just-car.pl/drzwi/154062-drzwi-przod-przednie-lewe-skoda-superb-iii-3v-15-lf9e.html" coords="731,656,726,708,732,788,965,792,962,742,962,688,966,658,972,639,980,575,984,557,921,558,885,561,859,567,820,585,784,606,756,624,742,636" shape="poly"&gt;
+    &lt;area target="_blank" alt="Drzwi tylnie" title="Drzwi tylnie" href="https://just-car.pl/drzwi/154064-drzwi-tyl-tylne-lewe-skoda-superb-iii-3v-15-lf9e.html" coords="963,789,1107,789,1139,732,1185,661,1193,636,1158,573,1127,567,1083,563,1038,559,1010,558,982,555,970,637,962,670" shape="poly"&gt;
+    &lt;area target="_blank" alt="Grill" title="Grill" href="https://allegro.pl/produkt/grill-skoda-superb-iii-3-lift-3v0853653b-2489e0f7-572e-4c27-a939-13c2fa9e196d?fromInactiveOffer=archived?srsltid&amp;offerId=17600082271" coords="440,707,466,675,446,670,436,678,428,707" shape="poly"&gt;
+    &lt;area target="_blank" alt="Lampy do doświetlania zakrętów" title="Lampy do doświetlania zakrętów" href="https://allegro.pl/oferta/skoda-superb-iii-lift-3v-lewy-halogen-drl-led-przod-przedni-org-3v0941699-17635222363?utm_feed=aa34192d-eee2-4419-9a9a-de66b9dfae24&amp;utm_source=google&amp;utm_medium=freelisting&amp;srsltid=AfmBOoq74X5DcLh9f_eNGf48hoJpZ3AAqEzeCXDnSq2KneoUhd0SE6mBT3U" coords="461,761,505,761,499,745,456,740" shape="poly"&gt;
+    &lt;area target="_blank" alt="Szyba przednia" title="Szyba przednia" href="https://szyby24.pl/pl/iii-2015-2024/25534-skoda-superb-iii-082020-kamerasensor--5907191283074.html" coords="675,621,724,632,773,598,807,578,834,565,846,560,811,555,749,583" shape="poly"&gt;
+&lt;/map&gt;
+</pre>
+
+            <h3>Przykład działania</h3>
+            <p>(Ta mapa działa poprawnie tylko na komputerze na pełnej szerokości strony)</p>
+
+            <div class="przyklad">
+
+                <map name="mapaObrazka">
+                    <area target="_blank" alt="Opona" title="Opona" href="https://oponeo.pl" coords="624,770,74" shape="circle">
+                    <area target="_blank" alt="Felga" title="Felga" href="https://eshop.skoda-auto.com/pl_PL/felgi-i-kola-kompletne/c/wheelsAndRims?srsltid=AfmBOopVyH3omd6gWGfHdKCv0o3JBCzwbrKeL8SErMpDH8LwqLtxW-VL" coords="1211,787,55" shape="circle">
+                    <area target="_blank" alt="Lampa przednia" title="Lampa przednia" href="https://www.signeda.pl/skoda-superb-2015-2024-czesci-samochodowe-ml1066/skoda-superb-2015-2024-reflektory-samochodowe-c1331/skoda-superb-2015-2024-lampy-przednie-i-czesci-c1357/skoda-superb-2015-2024-lampa-przednia-c1376" coords="454,696,487,698,513,708,529,695,550,673,518,668,488,671,473,673" shape="poly">
+                    <area target="_blank" alt="Lampa tylnia" title="Lampa tylnia" href="https://www.signeda.pl/skoda-superb-2015-2024-czesci-samochodowe-ml1066/skoda-superb-2015-2024-reflektory-samochodowe-c1331/skoda-superb-2015-2024-lampy-tylne-i-czesci-c1354/skoda-superb-2015-2024-lampa-tyl-c1466" coords="1331,671,1346,710,1385,703,1383,669,1331,669,1331,671,1331,670,1331,671,1331,671,1331,669" shape="poly">
+                    <area target="_blank" alt="Drzwi przednie" title="Drzwi przednie" href="https://just-car.pl/drzwi/154062-drzwi-przod-przednie-lewe-skoda-superb-iii-3v-15-lf9e.html" coords="731,656,726,708,732,788,965,792,962,742,962,688,966,658,972,639,980,575,984,557,921,558,885,561,859,567,820,585,784,606,756,624,742,636" shape="poly">
+                    <area target="_blank" alt="Drzwi tylnie" title="Drzwi tylnie" href="https://just-car.pl/drzwi/154064-drzwi-tyl-tylne-lewe-skoda-superb-iii-3v-15-lf9e.html" coords="963,789,1107,789,1139,732,1185,661,1193,636,1158,573,1127,567,1083,563,1038,559,1010,558,982,555,970,637,962,670" shape="poly">
+                    <area target="_blank" alt="Grill" title="Grill" href="https://allegro.pl/produkt/grill-skoda-superb-iii-3-lift-3v0853653b-2489e0f7-572e-4c27-a939-13c2fa9e196d?fromInactiveOffer=archived?srsltid&amp;offerId=17600082271" coords="440,707,466,675,446,670,436,678,428,707" shape="poly">
+                    <area target="_blank" alt="Lampy do doświetlania zakrętów" title="Lampy do doświetlania zakrętów" href="https://allegro.pl/oferta/skoda-superb-iii-lift-3v-lewy-halogen-drl-led-przod-przedni-org-3v0941699-17635222363?utm_feed=aa34192d-eee2-4419-9a9a-de66b9dfae24&amp;utm_source=google&amp;utm_medium=freelisting&amp;srsltid=AfmBOoq74X5DcLh9f_eNGf48hoJpZ3AAqEzeCXDnSq2KneoUhd0SE6mBT3U" coords="461,761,505,761,499,745,456,740" shape="poly">
+                    <area target="_blank" alt="Szyba przednia" title="Szyba przednia" href="https://szyby24.pl/pl/iii-2015-2024/25534-skoda-superb-iii-082020-kamerasensor--5907191283074.html" coords="675,621,724,632,773,598,807,578,834,565,846,560,811,555,749,583" shape="poly">
+                </map>
+
+                    <p>
+                        <img src = "../img/skoda.jpg" alt = "Skoda" usemap="#mapaObrazka">
+                    </p>
+            </div>
+
+            <h3>Rodzaje kształtów</h3>
+
+            <ul>
+                <li><strong>rect</strong> – prostokąt (x1,y1,x2,y2)</li>
+                <li><strong>circle</strong> – koło (x,y,radius)</li>
+                <li><strong>poly</strong> – wielokąt (wiele punktów)</li>
+            </ul>
+
+            <h3>Podsumowanie</h3>
+
+            <p>
+                Mapy odsyłaczy pozwalają podzielić jeden obraz na kilka klikalnych stref.
+                Każda z nich może prowadzić do innej strony.
+            </p>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

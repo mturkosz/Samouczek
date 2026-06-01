@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+    <link rel="stylesheet" href="../styles/formularze.css">
+    <style>
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 0.3vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="#">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Formularze</h2>
+
+            <p>
+                Formularze w HTML służą do zbierania danych od użytkownika.
+                Są używane m.in. w logowaniu, rejestracji, ankietach i wyszukiwarkach.
+            </p>
+
+            <h3>Podstawowa struktura formularza</h3>
+
+            <p>
+                Każdy formularz zaczyna się od znacznika <strong>&lt;form&gt;</strong>.
+            </p>
+
+            <pre>
+&lt;form&gt;
+    ...
+&lt;/form&gt;
+</pre>
+
+            <h3>Pole tekstowe</h3>
+
+            <p>
+                Najprostsze pole do wpisywania danych to <strong>input type="text"</strong>.
+            </p>
+
+            <pre>
+&lt;input type="text" placeholder="Wpisz imię"&gt;
+</pre>
+
+            <div class="przyklad">
+                <input type="text" placeholder="Wpisz imię">
+            </div>
+
+            <h3>Różne typy pól input</h3>
+
+            <ul>
+                <li><strong>text</strong> – tekst</li>
+                <li><strong>password</strong> – hasło (ukryte znaki)</li>
+                <li><strong>email</strong> – adres e-mail</li>
+                <li><strong>number</strong> – liczby</li>
+            </ul>
+
+            <pre>
+&lt;input type="password" placeholder="Hasło"&gt;
+&lt;input type="email" placeholder="E-mail"&gt;
+&lt;input type="number" placeholder="Wiek"&gt;
+</pre>
+
+            <div class="przyklad">
+                <input type="password" placeholder="Hasło"><br><br>
+                <input type="email" placeholder="E-mail"><br><br>
+                <input type="number" placeholder="Wiek">
+            </div>
+
+            <h3>Checkbox i radio</h3>
+
+            <p>
+                Checkbox pozwala zaznaczyć wiele opcji, a radio tylko jedną.
+            </p>
+
+            <pre>
+&lt;input type="checkbox"&gt; HTML
+&lt;input type="checkbox"&gt; CSS
+
+&lt;input type="radio" name="opcja"&gt; Tak
+&lt;input type="radio" name="opcja"&gt; Nie
+</pre>
+
+            <div class="przyklad">
+                <input type="checkbox"> HTML<br>
+                <input type="checkbox"> CSS<br><br>
+
+                <input type="radio" name="opcja"> Tak<br>
+                <input type="radio" name="opcja"> Nie
+            </div>
+
+            <h3>Przycisk wysyłania</h3>
+
+            <pre>
+&lt;input type="submit" value="Wyślij"&gt;
+</pre>
+
+            <div class="przyklad">
+                <input type="submit" value="Wyślij">
+            </div>
+
+            <h3>Textarea (większe pole tekstowe)</h3>
+
+            <pre>
+&lt;textarea placeholder="Napisz coś..."&gt;&lt;/textarea&gt;
+</pre>
+
+            <div class="przyklad">
+                <textarea placeholder="Napisz coś..."></textarea>
+            </div>
+
+            <h3>Minimalny formularz</h3>
+
+            <pre>
+&lt;form&gt;
+    &lt;input type="text" placeholder="Imię"&gt;
+    &lt;input type="email" placeholder="E-mail"&gt;
+    &lt;textarea placeholder="Wiadomość"&gt;&lt;/textarea&gt;
+    &lt;input type="submit" value="Wyślij"&gt;
+&lt;/form&gt;
+</pre>
+
+            <div class="przyklad">
+                <form>
+                    <input type="text" placeholder="Imię"><br><br>
+                    <input type="email" placeholder="E-mail"><br><br>
+                    <textarea placeholder="Wiadomość"></textarea><br><br>
+                    <input type="submit" value="Wyślij">
+                </form>
+            </div>
+
+            <h3>Podsumowanie</h3>
+
+            <p>
+                Formularze pozwalają na interakcję użytkownika ze stroną.
+                Dzięki nim można zbierać dane i tworzyć dynamiczne aplikacje internetowe.
+            </p>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+    <link rel="stylesheet" href="../styles/svg.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="#">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>SVG w HTML5</h2>
+
+            <p>
+                SVG (Scalable Vector Graphics) to format grafiki wektorowej obsługiwany przez przeglądarki
+                internetowe.
+                Grafika SVG jest opisana za pomocą kodu XML, dzięki czemu można ją tworzyć i edytować bezpośrednio w
+                HTML.
+            </p>
+
+            <p>
+                Największą zaletą SVG jest możliwość skalowania bez utraty jakości. W przeciwieństwie do obrazów
+                rastrowych
+                (np. JPG lub PNG), grafika SVG pozostaje ostra niezależnie od rozmiaru.
+            </p>
+
+            <p>
+                Wszystkie elementy SVG umieszcza się wewnątrz znacznika <strong>&lt;svg&gt;</strong>.
+                W jego wnętrzu można tworzyć figury geometryczne, teksty oraz bardziej zaawansowane rysunki.
+            </p>
+
+            <h3>1. Prostokąt</h3>
+
+            <p>
+                Element <strong>&lt;rect&gt;</strong> służy do tworzenia prostokątów.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+&lt;svg width="250" height="120"&gt;
+    &lt;rect
+        x="25"
+        y="20"
+        width="200"
+        height="80"
+        fill="red"
+        stroke="white"
+        stroke-width="3"
+    /&gt;
+&lt;/svg&gt;
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <svg width="250" height="120">
+                    <rect x="25" y="20" width="200" height="80" fill="red" stroke="white" stroke-width="3" />
+                </svg>
+            </div>
+
+            <h3>2. Okrąg</h3>
+
+            <p>
+                Element <strong>&lt;circle&gt;</strong> tworzy okręgi i koła.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+&lt;svg width="200" height="200"&gt;
+    &lt;circle
+        cx="100"
+        cy="100"
+        r="70"
+        fill="blue"
+    /&gt;
+&lt;/svg&gt;
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <svg width="200" height="200">
+                    <circle cx="100" cy="100" r="70" fill="blue" />
+                </svg>
+            </div>
+
+            <h3>3. Linia</h3>
+
+            <p>
+                Element <strong>&lt;line&gt;</strong> rysuje pojedynczą linię pomiędzy dwoma punktami.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+&lt;svg width="300" height="100"&gt;
+    &lt;line
+        x1="20"
+        y1="50"
+        x2="280"
+        y2="50"
+        stroke="yellow"
+        stroke-width="5"
+    /&gt;
+&lt;/svg&gt;
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <svg width="300" height="100">
+                    <line x1="20" y1="50" x2="280" y2="50" stroke="yellow" stroke-width="5" />
+                </svg>
+            </div>
+
+            <h3>4. Elipsa</h3>
+
+            <p>
+                Elipsę tworzy się za pomocą znacznika <strong>&lt;ellipse&gt;</strong>.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+&lt;svg width="250" height="150"&gt;
+    &lt;ellipse
+        cx="125"
+        cy="75"
+        rx="100"
+        ry="50"
+        fill="green"
+    /&gt;
+&lt;/svg&gt;
+</pre>
+            </div>
+            
+
+            <div class="demo-live">
+                <svg width="250" height="150">
+                    <ellipse cx="125" cy="75" rx="100" ry="50" fill="green" />
+                </svg>
+            </div>
+
+            <h3>4. Wielokąt (polygon)</h3>
+
+            <p>
+                Element <strong>&lt;polygon&gt;</strong> służy do rysowania wielokątów.
+                Punkty figury podaje się za pomocą atrybutu <strong>points</strong>.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+&lt;svg width="250" height="200"&gt;
+    &lt;polygon
+        points="125,20 220,170 30,170"
+        fill="orange"
+        stroke="white"
+        stroke-width="3"
+    /&gt;
+&lt;/svg&gt;
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <svg width="250" height="200">
+                    <polygon points="125,20 220,170 30,170" fill="orange" stroke="white" stroke-width="3" />
+                </svg>
+            </div>
+
+            <h3>Najczęściej używane znaczniki SVG</h3>
+
+            <table class="tabela-svg">
+                <tr>
+                    <th>Znacznik</th>
+                    <th>Opis</th>
+                </tr>
+                <tr>
+                    <td>&lt;svg&gt;</td>
+                    <td>Obszar rysunku SVG</td>
+                </tr>
+                <tr>
+                    <td>&lt;rect&gt;</td>
+                    <td>Prostokąt</td>
+                </tr>
+                <tr>
+                    <td>&lt;circle&gt;</td>
+                    <td>Okrąg lub koło</td>
+                </tr>
+                <tr>
+                    <td>&lt;ellipse&gt;</td>
+                    <td>Elipsa</td>
+                </tr>
+                <tr>
+                    <td>&lt;line&gt;</td>
+                    <td>Linia</td>
+                </tr>
+                <tr>
+                    <td>&lt;polygon&gt;</td>
+                    <td>Wielokąt złożony z wielu punktów</td>
+                </tr>
+            </table>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

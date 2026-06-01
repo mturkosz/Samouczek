@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="#">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="floatUklady.html">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Stylowanie tekstu w CSS</h2>
+
+            <p>
+                CSS umożliwia pełną kontrolę nad wyglądem tekstu na stronie internetowej.
+                Możemy zmieniać jego wielkość, kolor, odstępy, wyrównanie oraz dekoracje.
+            </p>
+
+            <h3>Kolor tekstu</h3>
+
+            <p>
+                Właściwość <strong>color</strong> odpowiada za kolor tekstu.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+p {
+    color: aqua;
+}
+</pre>
+            </div>
+
+            <p style="color:aqua;">
+                Przykład tekstu w kolorze aqua.
+            </p>
+
+            <h3>Wielkość tekstu</h3>
+
+            <p>
+                Do zmiany rozmiaru tekstu używamy <strong>font-size</strong>.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 2rem;
+}
+</pre>
+            </div>
+
+            <p style="font-size: 20px;">Przykład tekstu 20px</p>
+            <p style="font-size: 2rem;">Przykład tekstu 2rem</p>
+
+            <h3>Wyrównanie tekstu</h3>
+
+            <p>
+                Właściwość <strong>text-align</strong> ustawia wyrównanie tekstu.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+p {
+    text-align: center;
+}
+</pre>
+            </div>
+
+            <p style="text-align:center;">
+                Ten tekst jest wyśrodkowany.
+            </p>
+
+            <h3>Grubość i styl tekstu</h3>
+
+            <p>
+                Możemy zmieniać grubość oraz styl tekstu.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+p {
+    font-weight: bold;
+    font-style: italic;
+}
+</pre>
+            </div>
+
+            <p style="font-weight:bold;">Tekst pogrubiony</p>
+            <p style="font-style:italic;">Tekst pochylony</p>
+
+            <h3>Odstępy między literami i liniami</h3>
+
+            <div class="przyklad">
+                <pre>
+p {
+    letter-spacing: 2px;
+    line-height: 1.8;
+}
+</pre>
+            </div>
+
+            <p style="letter-spacing:2px;">
+                Tekst z większym odstępem między literami.
+            </p>
+
+            <p style="line-height:1.8;">
+                Tekst z większym odstępem między liniami. Tekst z większym odstępem między liniami.
+            </p>
+
+            <h3>Dekoracja tekstu</h3>
+
+            <p>
+                Właściwość <strong>text-decoration</strong> pozwala np. podkreślać tekst.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+a {
+    text-decoration: none;
+}
+</pre>
+            </div>
+
+            <p style="text-decoration: underline;">
+                Tekst podkreślony
+            </p>
+
+            <p style="text-decoration: line-through;">
+                Tekst przekreślony
+            </p>
+
+            <h3>Transformacja tekstu</h3>
+
+            <div class="przyklad">
+                <pre>
+p {
+    text-transform: uppercase;
+}
+</pre>
+            </div>
+
+            <p style="text-transform: uppercase;">
+                tekst zamieniony na wielkie litery
+            </p>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>

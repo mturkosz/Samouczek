@@ -1,0 +1,76 @@
+.demo-live a {
+    display: block;
+    width: 120px;
+    padding: 6px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid black;
+    color: black;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.header-menu a {
+    display: inline-block;
+    background: rgb(0, 255, 247);
+}
+
+.vertical-menu {
+    width: 140px;
+}
+
+.vertical-menu a {
+    background: rgb(0, 255, 247);
+}
+
+.layout3menu {
+    overflow: auto;
+    background: rgb(187, 187, 187);
+}
+
+.layout3menu .lewa{
+    float: left;
+    width: 15vw;
+    padding: 10px;
+    border-right: 2px solid black;
+}
+
+.layout3menu .srodek {
+    float: left;
+    width: 60vw;
+    padding: 10px;
+}
+
+
+.layout3menu .prawa{
+    float: right ;
+    width: 15vw;
+    padding: 10px;
+    border-left: 2px solid black;
+}
+
+.prawa a, .lewa a{
+    background: rgb(0, 255, 247);
+}
+
+.link-states a:link {
+    background: rgb(136, 0, 255);
+}
+
+.link-states a:visited {
+    background: rgb(0, 255, 247);
+}
+
+.link-states a:hover {
+    background: rgb(98, 207, 98);
+}
+
+.link-states a:active {
+    background: rgb(0, 204, 255);
+}

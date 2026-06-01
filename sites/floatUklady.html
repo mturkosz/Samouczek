@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Michał Turkosz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samouczek HTML & CSS</title>
+    <link rel="stylesheet" href="../styles/main_style.css">
+    <link rel="stylesheet" href="../styles/floatUklady.css">
+</head>
+
+<body>
+    <div id="uklad">
+        <header>
+            <h1>Samouczek HTML & CSS</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Strona główna</a></li>
+                <li><a href="wprowadzenie.html">Wprowadzenie</a></li>
+                <li><a href="html.html">HTML</a>
+                    <ul class="submenu">
+                        <li><a href="struktura.html">Struktura dokumentu</a></li>
+                        <li><a href="tagi.html">Tagi tekstowe</a></li>
+                        <li><a href="listy.html">Listy</a></li>
+                        <li><a href="odnosnikiObrazki.html">Odnośniki i obrazki</a></li>
+                        <li><a href="tabele.html">Tabele</a></li>
+                        <li><a href="formularze.html">Formularze</a></li>
+                        <li><a href="znacznikiSemantyczne.html">Znaczniki semantyczne</a></li>
+                        <li><a href="multimedia.html">Multimedia</a></li>
+                        <li><a href="mapyOdsylaczy.html" class="ostatni">Mapy odsyłaczy</a></li>
+                    </ul>
+                </li>
+                <li><a href="css.html">CSS</a>
+                    <ul class="submenu">
+                        <li><a href="selektory.html">Selektory</a></li>
+                        <li><a href="jednostki.html">Jednostki</a></li>
+                        <li><a href="modelPudelkowy.html">Model pudełkowy</a></li>
+                        <li><a href="stylowanieTekstu.html">Stylowanie tekstu</a></li>
+                        <li><a href="tlo.html">Tło</a></li>
+                        <li><a href="kaskadaDziedziczenie.html">Kaskada i dziedziczenie</a></li>
+                        <li><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                        <li><a href="#">Float i układy</a></li>
+                        <li><a href="menu.html">Menu nawigacyjne</a></li>
+                        <li><a href="responsywnosc.html">Responsywność</a></li>
+                        <li><a href="kotwice.html">Kotwice</a></li>
+                        <li><a href="animacjePrzejscia.html">Animacje i przejścia</a></li>
+                        <li><a href="svg.html">SVG w HTML5</a></li>
+                        <li><a href="menuRozwijalne.html" class="ostatni">Menu rozwijalne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h2>Float i układy</h2>
+
+            <p>
+                Właściwość float jest podstawą budowania układów stron internetowych.
+                Pozwala ona „wypchnąć” element w lewo lub w prawo, a pozostała treść zaczyna go opływać.
+                Dzięki temu można tworzyć proste layouty bez użycia bardziej zaawansowanych technologii.
+            </p>
+
+            <h3>1. float: left – podstawowe działanie</h3>
+
+            <p>
+                Element ustawiony z wartością <strong>float: left</strong> zostaje przesunięty na lewą stronę,
+                a tekst zaczyna go opływać z prawej strony.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+.box {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background: red;
+}
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <div class="box red float-left"></div>
+
+                <p>
+                    Ten tekst pokazuje efekt działania float. Element czerwony został przesunięty w lewo,
+                    a tekst automatycznie układa się obok niego, wykorzystując wolną przestrzeń.
+                </p>
+            </div>
+
+            <h3>2. float: right – przesunięcie w prawo</h3>
+
+            <p>
+                Wartość <strong>right</strong> działa analogicznie, ale element trafia na prawą stronę kontenera.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+.box {
+    float: right;
+    width: 80px;
+    height: 80px;
+    background: blue;
+}
+</pre>
+            </div>
+
+            <div class="demo-live">
+                <div class="box blue float-right"></div>
+
+                <p>
+                    W tym przypadku niebieski element został przesunięty na prawą stronę,
+                    a tekst automatycznie dopasował się do dostępnej przestrzeni po lewej.
+                </p>
+            </div>
+
+            <h3>3. Układ dwóch kolumn</h3>
+
+            <p>
+                Float jest bardzo często używany do tworzenia układów kolumnowych stron internetowych.
+                Wystarczy ustawić dwa elementy obok siebie i nadać im odpowiednią szerokość.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+.left {
+    float: left;
+    width: 50%;
+}
+
+.right {
+    float: left;
+    width: 50%;
+}
+</pre>
+            </div>
+
+            <div class="demo-live layout2">
+                <div class="left">
+                    LEWA KOLUMNA
+                    <p>Treść lewej kolumny.</p>
+                </div>
+
+                <div class="right">
+                    PRAWA KOLUMNA
+                    <p>Treść prawej kolumny.</p>
+                </div>
+            </div>
+
+            <h3>4. Trzy kolumny</h3>
+
+            <p>
+                Kolejnym typowym zastosowaniem float jest tworzenie układów trójkolumnowych.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+div {
+    float: left;
+    width: 33.33%;
+}
+</pre>
+            </div>
+
+            <div class="demo-live layout3">
+                <div>Kolumna 1</div>
+                <div>Kolumna 2</div>
+                <div>Kolumna 3</div>
+            </div>
+
+            <h3>5. Problem float – brak wysokości kontenera</h3>
+
+            <p>
+                Jednym z najczęstszych problemów float jest to, że elementy „wypadają” z normalnego układu strony.
+                W efekcie kontener nie zawsze dopasowuje swoją wysokość do zawartości.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+.box {
+    float: left;
+}
+</pre>
+            </div>
+
+            <div class="demo-live problem">
+                <div class="float-box"></div>
+                <div class="float-box"></div>
+            </div>
+
+            <p>
+                Tutaj widać problem – kontener nie obejmuje elementów float, przez co jego wysokość może się „zapadać”.
+            </p>
+
+            <h3>6. Rozwiązanie – clear</h3>
+
+            <p>
+                Aby rozwiązać ten problem, stosuje się właściwość <strong>clear</strong>,
+                która zatrzymuje opływanie elementów float.
+            </p>
+
+            <div class="przyklad">
+                <pre>
+.clear {
+    clear: both;
+}
+</pre>
+            </div>
+
+            <div class="demo-live clear-demo">
+                <div class="float-box"></div>
+                <div class="float-box"></div>
+                <div class="clear"></div>
+
+                <p>
+                    Dzięki clear kontener poprawnie obejmuje wszystkie elementy.
+                </p>
+            </div>
+        </main>
+        <footer>&copy; Michał Turkosz 2026</footer>
+    </div>
+
+</body>
+
+</html>
